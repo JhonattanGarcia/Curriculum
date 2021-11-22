@@ -1,0 +1,51 @@
+﻿body{
+    color: sienna;
+    text-align: center;
+    font-family: Garamond;
+}
+
+
+#FotoPerfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: peru;
+    align-items: center;
+    box-shadow: -20px 5px 10px 0px rgba(0, 20, 30, 0.274);
+    border: 15px solid peru;
+}
+
+@supports(object-fit: cover) {
+    #FP {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+#FP {
+    object-fit: contain;
+}
+
+
+
+#container{
+    width: 70%;
+    padding: 1em;
+    text-align: justify;
+    border: 1px solid peru;
+    margin: 0 auto;
+    background-color: peachpuff;
+}
+
+#titulo{
+    font-size: larger;
+    width: 75%;
+    text-align: center;
+    text-shadow: -10px 7px 7px rgba(0, 20, 30, 0.274);    
+}
+
+p{
+    text-align: justify;
+}
