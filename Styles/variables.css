@@ -1,0 +1,157 @@
+﻿/* Fuente compartida de valores visuales.
+   Importar al inicio de cada hoja: @import url("./variables.css");
+   Consumir con var(--nombre). Paleta Editorial Tech de Jhonattan Garcia. */
+:root {
+    /* Core / Dark */
+    --ink: #202A30;
+    --deep-petroleum: #14252D;
+    --slate-teal: #29444A;
+
+    /* Warm Neutrals */
+    --warm-ivory: #F6F3ED;
+    --soft-champagne: #E8D8C2;
+    --warm-camel: #C49A67;
+
+    /* Text */
+    --text-primary: #202A30;
+    --text-secondary: #59696D;
+    --text-muted: #67777C;
+    --text-on-dark: #F6F3ED;
+    --text-on-dark-secondary: #D2D9D7;
+    --text-on-dark-muted: #A7B8BA;
+
+    /* Surfaces */
+    --surface-dark: #202A30;
+    --surface-dark-alt: #29444A;
+    --surface-light: #F6F3ED;
+    --surface-light-alt: #EEEAE2;
+    --surface-warm: #E8D8C2;
+
+    /* Borders */
+    --border-light: #D7D3CB;
+    --border-dark: #485158;
+    --border-subtle: #E4E0D8;
+
+    /* Accents */
+    --accent-primary: #C49A67;
+    --accent-hover: #D6AD7A;
+    --accent-muted: #B58C5B;
+
+    /* Status: validar el contraste según el fondo y el tamaño del texto. */
+    --status-success: #A8C5AC;
+    --status-warning: #D8AC72;
+    --status-error: #C77B73;
+
+    /* Roles compartidos: compatibilidad con las hojas del portal. */
+    --color-background: var(--surface-light);
+    --color-surface: var(--surface-light-alt);
+    --color-paper: var(--surface-light);
+    --color-text: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-muted: var(--text-muted);
+    --color-primary: var(--ink);
+    --color-primary-hover: var(--slate-teal);
+    --color-on-primary: var(--text-on-dark);
+    --color-border: var(--border-light);
+    --color-focus: var(--deep-petroleum);
+    --color-focus-on-dark: var(--warm-ivory);
+    --color-success: var(--status-success);
+    --color-warning: var(--status-warning);
+    --color-error: var(--status-error);
+    --color-overlay: rgb(32 42 48 / 45%);
+
+    /* CTA sobre fondo oscuro: Camel con texto Ink. */
+    --button-on-dark-background: var(--accent-primary);
+    --button-on-dark-hover: var(--accent-hover);
+    --button-on-dark-text: var(--ink);
+    /* CTA sobre fondo claro: Ink con texto Ivory. */
+    --button-on-light-background: var(--ink);
+    --button-on-light-hover: var(--slate-teal);
+    --button-on-light-text: var(--text-on-dark);
+
+    /* Font families */
+    --font-display: 'Manrope', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+
+    /* Font sizes */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --heading-h4: 1.5rem;
+    --heading-h3: clamp(1.625rem, 3vw, 2rem);
+    --heading-h2: clamp(1.875rem, 4vw, 3rem);
+    --heading-h1: clamp(2.5rem, 6vw, 5rem);
+
+    /* Font weights */
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* Line heights */
+    --leading-display: 1.05;
+    --leading-heading: 1.15;
+    --leading-body: 1.65;
+
+    /* Letter spacing */
+    --tracking-display: -0.045em;
+    --tracking-heading: -0.025em;
+    --tracking-body: 0;
+    --tracking-label: 0.06em;
+
+    /* Alias para los estilos compartidos existentes */
+    --font-family-body: var(--font-body);
+    --font-family-heading: var(--font-display);
+    --font-size-small: var(--text-sm);
+    --font-size-body: var(--text-base);
+    --font-size-heading: var(--heading-h1);
+    --font-size-subheading: var(--heading-h2);
+    --line-height-body: var(--leading-body);
+    --line-height-heading: var(--leading-heading);
+
+    /* Espaciados y dimensiones */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+    --layout-max-width: 80rem;
+    --content-max-width: 65rem;
+    --sidebar-width: 18rem;
+    --page-padding: clamp(1rem, 3vw, 2.5rem);
+    --control-min-size: 2.75rem;
+    --border-width: 1px;
+    --radius-small: 0.375rem;
+    --radius-medium: 0.75rem;
+    --radius-round: 50%;
+    --shadow-card: 0 0.25rem 1rem rgb(32 42 48 / 8%);
+    --shadow-paper: 0 0.75rem 2rem rgb(32 42 48 / 12%);
+    --focus-outline: 2px solid var(--color-focus);
+    --focus-outline-on-dark: 2px solid var(--color-focus-on-dark);
+    --focus-offset: 3px;
+
+    /* Navegación y movimiento de las hojas del cuaderno */
+    --duration-fast: 160ms;
+    --duration-normal: 280ms;
+    --duration-page-turn: 650ms;
+    --ease-standard: cubic-bezier(0.2, 0, 0.2, 1);
+    --notebook-perspective: 100rem;
+    --page-turn-angle: 85deg;
+    --z-navigation: 10;
+    --z-overlay: 20;
+}
+
+/* Los componentes deben consumir estas duraciones para respetar la preferencia. */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --duration-fast: 0ms;
+        --duration-normal: 0ms;
+        --duration-page-turn: 0ms;
+        --page-turn-angle: 0deg;
+    }
+}
