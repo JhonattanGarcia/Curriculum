@@ -1,0 +1,18 @@
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+RewriteEngine On
+
+# Keep the source shell and content fragments on their canonical public routes.
+RewriteRule ^index\.html$ index.php [END]
+RewriteRule ^(?:main|resumen)\.html$ ./ [R=302,END]
+RewriteRule ^formacion_academica\.html$ formacion [R=302,END]
+RewriteRule ^experiencia_laboral\.html$ experiencia [R=302,END]
+RewriteRule ^aboutme\.html$ about [R=302,END]
+RewriteRule ^contacto\.html$ contacto [R=302,END]
+RewriteRule ^(?:Old|\.git)(?:/|$) - [F,END,NC]
+RewriteRule ^(?:ROADMAP\.md|routes\.json)$ - [F,END,NC]
+RewriteRule ^(?:formacion|experiencia|about|contacto)/?$ index.php [END]
+RewriteRule ^(?:sitemap\.xml|robots\.txt)$ index.php [END]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [END]

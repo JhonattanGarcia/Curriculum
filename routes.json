@@ -1,0 +1,52 @@
+[
+  {
+    "id": "summary",
+    "path": "",
+    "file": "main.html",
+    "label": {
+      "en": "Summary",
+      "es": "Resumen"
+    },
+    "description": "Jhonattan Garcia — software developer and Level 2 SOC analyst."
+  },
+  {
+    "id": "education",
+    "path": "formacion",
+    "file": "formacion_academica.html",
+    "label": {
+      "en": "Education",
+      "es": "Formación"
+    },
+    "description": "Software development education and continuous professional learning."
+  },
+  {
+    "id": "experience",
+    "path": "experiencia",
+    "file": "experiencia_laboral.html",
+    "label": {
+      "en": "Experience",
+      "es": "Experiencia"
+    },
+    "description": "Professional experience in software analysis, reporting, and information security."
+  },
+  {
+    "id": "about",
+    "path": "about",
+    "file": "aboutme.html",
+    "label": {
+      "en": "About Me",
+      "es": "Sobre mí"
+    },
+    "description": "Jhonattan Garcia’s professional approach, interests, and personal introduction."
+  },
+  {
+    "id": "contact",
+    "path": "contacto",
+    "file": "contacto.html",
+    "label": {
+      "en": "Contact",
+      "es": "Contacto"
+    },
+    "description": "Contact Jhonattan Garcia by professional email."
+  }
+]

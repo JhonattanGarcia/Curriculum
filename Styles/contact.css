@@ -1,0 +1,62 @@
+﻿@import url('./variables.css');
+
+.contact-introduction h1 {
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    overflow-wrap: normal;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.contact-details .contact-channel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-details .contact-channel + .contact-channel {
+    margin-top: 0;
+    padding-top: var(--space-6);
+    border-top: var(--border-width) solid var(--border-subtle);
+}
+
+.contact-details .contact-channel h2 {
+    margin: 0;
+    font-size: var(--text-lg);
+    line-height: var(--leading-heading);
+}
+
+.contact-details .contact-identifier {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.contact-value {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--control-min-size);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.contact-whatsapp-action {
+    max-width: 100%;
+    margin-top: var(--space-2);
+    white-space: normal;
+    background: var(--button-on-light-background);
+    color: var(--button-on-light-text);
+}
+
+.contact-whatsapp-action:hover {
+    background: var(--button-on-light-hover);
+}

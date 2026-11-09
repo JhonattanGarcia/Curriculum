@@ -2,65 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- APP_BASE -->
+    <!-- PAGE_META -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Jhonattan Garcia: software development, cybersecurity, and professional experience.">
     <title>Jhonattan Garcia | Software & Cybersecurity</title>
     <link rel="stylesheet" href="Styles/base.css">
     <link rel="stylesheet" href="Styles/index.css">
+    <link rel="stylesheet" href="Styles/navigation.css">
+    <link rel="stylesheet" href="Styles/contact.css">
 </head>
 <body>
     <a class="skip-link" href="#contenido" data-i18n="text0">Skip to content</a>
     <header class="site-header">
-        <a class="brand" href="./index.html" aria-label="Jhonattan Garcia, home">JG<span aria-hidden="true">.</span></a>
+        <a class="brand" href="./" data-route="summary" aria-label="Jhonattan Garcia, home">JG<span aria-hidden="true">.</span></a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="header-tools"><span aria-hidden="true">☰</span> <span data-i18n="menu">Menu</span></button>
         <div class="header-tools" id="header-tools">
 <nav class="section-nav" aria-label="Curriculum sections">
-                <a href="#resumen" data-i18n="text3">Summary</a>
-                <a href="#formacion" data-i18n="text4">Education</a>
-                <a href="#experiencia" data-i18n="text5">Experience</a>
-                <a href="#hobbies" data-i18n="aboutMe">More about me</a>
-                <a href="#contacto" data-i18n="text14">Contact</a>
+                <a href="./" data-route="summary" data-i18n="nav_summary">Summary</a>
+                <a href="formacion" data-route="education" data-i18n="nav_education">Education</a>
+                <a href="experiencia" data-route="experience" data-i18n="nav_experience">Experience</a>
+                <a href="about" data-route="about" data-i18n="nav_about">About Me</a>
+                <a href="contacto" data-route="contact" data-i18n="nav_contact">Contact</a>
             </nav>
 <label class="language-control" for="language"><span data-i18n="language">Language</span><select id="language"><option value="en" selected>English</option><option value="es">Español</option></select></label></div>
     </header>
 
     <div class="background-strip" aria-hidden="true"></div>
-    <main id="contenido" class="notebook">
-        <section class="introduction" aria-labelledby="nombre">
-            <p class="tech-label" data-i18n="text1">Software development &amp; cybersecurity</p>
-            <h1 id="nombre">Jhonattan<br>Garcia<span class="accent">.</span></h1>
-            <p class="introduction-copy" data-i18n="text2">Software developer and Level 2 SOC analyst. Process automation, threat analysis, and solutions that connect development and security.</p>
-            <a class="contact-link" href="mailto:jhonattan_garcia@outlook.com"><span data-i18n="cta">Let us talk</span> <span aria-hidden="true">↗</span></a>
-        </section>
-
-        <!-- Base inicial: el cargador JS sustituirá estas secciones por fragmentos. -->
-        <div class="notebook-content">
-            <div id="book-content" class="book-content">
-                <section id="resumen" aria-labelledby="titulo-resumen">
-                    <h2 id="titulo-resumen" data-i18n="text7">Development with a security mindset.</h2>
-                    <p data-i18n="text8">My work combines tool development, code analysis, and automation to improve security operations.</p>
-                </section>
-                <section id="formacion" aria-labelledby="titulo-formacion">
-                    <h3 id="titulo-formacion" data-i18n="text4">Education</h3>
-                    <p data-i18n="text9">Software development education at Universitaria Agustiniana and continuous learning in technology and cybersecurity.</p>
-                </section>
-                <section id="experiencia" aria-labelledby="titulo-experiencia">
-                    <h3 id="titulo-experiencia" data-i18n="text5">Experience</h3>
-                    <p data-i18n="text10">Experience at Appgate, Am?ricas BPS, and Teleperformance in software analysis, reporting, and information security.</p>
-                </section>
-                <section id="hobbies" aria-labelledby="titulo-hobbies">
-                    <h3 id="titulo-hobbies" data-i18n="text11">More about me</h3>
-                    <p data-i18n="text12">Dungeons &amp; Dragons, strategy games, travel, and photography.</p>
-                </section>
-                <section id="contacto" aria-labelledby="titulo-contacto">
-                    <h3 id="titulo-contacto" data-i18n="text13">Get in touch</h3>
-                    <a href="mailto:jhonattan_garcia@outlook.com">jhonattan_garcia@outlook.com</a>
-                </section>
-            </div>
-        </div>
+    <main id="contenido" class="notebook" tabindex="-1" aria-busy="true">
+        <!-- PAGE_CONTENT -->
+        <p class="content-status" role="status" data-i18n="loading">Loading content…</p>
+        <noscript><p class="content-status">Open the site through Apache to read its server-rendered content.</p></noscript>
     </main>
-    <footer class="site-footer"><p class="tech-label" data-i18n="text15">Jhonattan Garcia ? Personal portfolio</p></footer>
+    <nav class="page-controls" aria-label="Previous and next sections">
+        <!-- PAGE_CONTROLS -->
+    </nav>
+    <p class="sr-only" id="navigation-status" role="status" aria-live="polite"></p>
+    <footer class="site-footer"><p class="tech-label" data-i18n="text15">Jhonattan Garcia · Personal portfolio</p></footer>
     <script src="Scripts/language.js" defer></script>
     <script src="Scripts/header.js" defer></script>
+    <script id="route-data" type="application/json">null</script>
+    <script src="Scripts/transitions.js" defer></script>
+    <script src="Scripts/script.js" defer></script>
 </body>
 </html>

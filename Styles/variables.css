@@ -1,4 +1,4 @@
-﻿/* Fuente compartida de valores visuales.
+/* Fuente compartida de valores visuales.
    Importar al inicio de cada hoja: @import url("./variables.css");
    Consumir con var(--nombre). Paleta Editorial Tech de Jhonattan Garcia. */
 :root {
@@ -139,10 +139,18 @@
     --duration-fast: 160ms;
     --duration-normal: 280ms;
     --duration-page-turn: 650ms;
+    --duration-dissolve: 240ms;
+    --duration-reveal: 260ms;
+    --hero-overlay-start: rgb(20 37 45 / 30%);
+    --hero-overlay-end: rgb(20 37 45 / 65%);
     --ease-standard: cubic-bezier(0.2, 0, 0.2, 1);
     --notebook-perspective: 100rem;
     --page-turn-angle: 85deg;
     --z-navigation: 10;
+    --navigation-edge-width: 1.5rem;
+    --navigation-arrow-opacity: 0.3;
+    --navigation-desktop-size: 62px;
+    --navigation-desktop-chevron: 15px;
     --z-overlay: 20;
 }
 
@@ -152,6 +160,8 @@
         --duration-fast: 0ms;
         --duration-normal: 0ms;
         --duration-page-turn: 0ms;
+        --duration-dissolve: 0ms;
+        --duration-reveal: 0ms;
         --page-turn-angle: 0deg;
     }
 }
