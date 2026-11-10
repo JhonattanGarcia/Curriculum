@@ -8,6 +8,10 @@ let currentIndex = -1;
 let requestedIndex = -1;
 let controller;
 let navigationId = 0;
+let cleanupSection = () => {};
+function initializeSection() {
+    cleanupSection = window.ExperienceModule?.initialize(contentContainer) || (() => {});
+}
 const routeURL = route => new URL(route.path || './', appBase);
 function routeIndex() {
     const path = decodeURI(location.pathname).replace(/\/$/, '');
@@ -98,11 +102,13 @@ async function navigate(index, {historyMode = 'push', animate = true, focus = tr
         if (animate && currentIndex >= 0) await PortfolioTransition.run(contentContainer, false, request.signal);
         if (id !== navigationId) return;
         PortfolioTransition.cancel();
+        cleanupSection();
         contentContainer.innerHTML = html;
         contentContainer.dataset.section = routes[index].id;
         currentIndex = index;
         if (historyMode === 'push' && location.pathname !== routeURL(routes[index]).pathname) history.pushState({section: routes[index].id}, '', routeURL(routes[index]));
         updateNavigation();
+        initializeSection();
         if (focus) {
             showHeader();
             contentContainer.scrollIntoView({block: 'start', behavior: 'instant'});
@@ -157,6 +163,7 @@ if (Array.isArray(routes)) {
         currentIndex = requestedIndex = initialIndex;
         cache.set(initialIndex, contentContainer.innerHTML);
         updateNavigation();
+        initializeSection();
         history.replaceState({section: routes[initialIndex].id}, '', location.href);
         prefetchAdjacent();
     }

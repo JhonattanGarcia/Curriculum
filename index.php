@@ -1,6 +1,8 @@
 <?php
 // XAMPP/Apache entry point. index.html remains the shared, content-free shell.
 declare(strict_types=1);
+require_once __DIR__ . '/Scripts/experience_data.php';
+$experienceConfig = json_decode(file_get_contents(__DIR__ . '/Resources/experience.json'), true, 512, JSON_THROW_ON_ERROR);
 $routes = json_decode(file_get_contents(__DIR__ . '/routes.json'), true, 512, JSON_THROW_ON_ERROR);
 $base = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'])), '/') . '/';
 $request = rawurldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?: '/');
@@ -33,6 +35,7 @@ if ($index === false) {
     // A fragment BOM becomes an anonymous grid item when inserted inside main.
     $content = preg_replace('/^\xEF\xBB\xBF/', '', file_get_contents(__DIR__ . '/' . $routes[$index]['file']));
 }
+if ($routes[$index]['id'] === 'experience') $content = render_experience($content, $experienceConfig);
 if (isset($_GET['fragment'])) {
     header('Content-Type: text/html; charset=UTF-8');
     header('X-Portfolio-Fragment: 1');
@@ -59,6 +62,7 @@ $meta = '<link rel="canonical" href="' . $escape($publicBase . $route['path']) .
     '<meta property="og:type" content="profile">' . "\n" .
     '<script type="application/ld+json" id="profile-schema">' . json_encode($schema, JSON_HEX_TAG | JSON_UNESCAPED_SLASHES) . '</script>';
 $html = file_get_contents(__DIR__ . '/index.html');
+$html = str_replace('<script id="experience-data" type="application/json">null</script>', '<script id="experience-data" type="application/json">' . json_encode($experienceConfig, JSON_HEX_TAG | JSON_UNESCAPED_SLASHES) . '</script>', $html);
 $html = str_replace('<!-- APP_BASE -->', '<base href="' . $escape($base) . '">', $html);
 $html = str_replace('<!-- PAGE_META -->', $meta, $html);
 $html = preg_replace('/<title>.*?<\/title>/s', '<title>' . $escape($title) . '</title>', $html);

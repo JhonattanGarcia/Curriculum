@@ -1,0 +1,55 @@
+{
+  "timeZone": "America/Bogota",
+  "companies": [
+    {
+      "id": "teleperformance",
+      "company": "Teleperformance",
+      "start": "2016-04",
+      "end": "2019-02",
+      "tools": {
+        "cyber": [
+          "risk",
+          "ioc",
+          "fraud",
+          "automation"
+        ],
+        "tools": [
+          "risk",
+          "fraud",
+          "automation"
+        ]
+      }
+    },
+    {
+      "id": "appgate",
+      "company": "Appgate",
+      "start": "2019-12",
+      "end": null,
+      "tools": {
+        "cyber": [
+          "siem",
+          "ioc",
+          "threat",
+          "external",
+          "fraud",
+          "sandbox",
+          "automation"
+        ],
+        "tools": [
+          "siem",
+          "threat",
+          "external",
+          "sandbox",
+          "automation"
+        ]
+      }
+    },
+    {
+      "id": "americas",
+      "company": "Américas BPS",
+      "start": "2019-05",
+      "end": "2019-08",
+      "tools": {}
+    }
+  ]
+}

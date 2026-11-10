@@ -69,6 +69,12 @@
     --button-on-light-hover: var(--slate-teal);
     --button-on-light-text: var(--text-on-dark);
 
+    /* Experience chart palette */
+    --experience-chart-height: 11rem;
+    --chart-bar: var(--slate-teal);
+    --chart-teleperformance: var(--slate-teal);
+    --chart-appgate: var(--warm-camel);
+
     /* Font families */
     --font-display: 'Manrope', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -141,6 +147,7 @@
     --duration-page-turn: 650ms;
     --duration-dissolve: 240ms;
     --duration-reveal: 260ms;
+    --duration-chart: 750ms;
     --hero-overlay-start: rgb(20 37 45 / 30%);
     --hero-overlay-end: rgb(20 37 45 / 65%);
     --ease-standard: cubic-bezier(0.2, 0, 0.2, 1);
@@ -162,6 +169,7 @@
         --duration-page-turn: 0ms;
         --duration-dissolve: 0ms;
         --duration-reveal: 0ms;
+        --duration-chart: 0ms;
         --page-turn-angle: 0deg;
     }
 }

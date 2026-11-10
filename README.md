@@ -108,3 +108,46 @@ Los controles de sección se presentan como flechas laterales translúcidas con
 texto accesible oculto; hover y foco las vuelven opacas. En móvil los bordes
 izquierdo y derecho activan anterior y siguiente bajo el encabezado. Con el
 menú hamburguesa abierto se ocultan las zonas laterales para evitar cruces.
+
+## Experiencia: gr?ficas y logros
+
+`experiencia_laboral.html` conserva los 19 logros de las tres empresas del CV
+anterior. La investigaci?n sobre Replit se destaca con los enlaces originales
+al sitio oficial y a LinkedIn. Los logros se renderizan en el servidor y se
+pueden leer sin JavaScript.
+
+`Scripts/experiencia_laboral.js` controla dos bloques independientes de barras
+horizontales y gr?fico circular. Se preservan los conjuntos de herramientas y
+las cifras originales (3 a?os en Teleperformance y 6 en Appgate); la nota bajo
+las gr?ficas explica que son datos del CV anterior. Los filtros actualizan
+ambas gr?ficas, el total y una tabla accesible de cada bloque.
+
+Chart.js 4.5.1 se sirve desde `Scripts/vendor/`, con licencia MIT incluida. Solo
+se carga al abrir Experiencia. El cargador central inicializa el m?dulo tras
+insertar el fragmento y lo destruye antes de salir para evitar eventos o
+instancias duplicadas. Se respetan idioma y movimiento reducido. Los colores
+se obtienen de `Styles/variables.css` y el dise?o de `Styles/experiencia_laboral.css`.
+
+Pruebas:
+
+- `node --test Tests/navigation.test.cjs Tests/experience.test.cjs`
+- `python Tests/check_fragment_layout.py` con Apache iniciado.
+- `node Tests/experience.browser.cjs` con Chrome headless abierto en el puerto
+  de depuraci?n local 9239 y un perfil temporal. El script cierra esa instancia
+  al terminar. Requiere Node 22; admite `QA_CDP_URL` y `QA_SITE_URL`.
+
+La prueba de navegador comprueba filtros, idioma, destrucci?n/reentrada,
+publicaci?n, anchos de 390/320 px, movimiento reducido y ca?da de la biblioteca.
+Las capturas se guardan en una carpeta temporal, fuera del repositorio.
+
+## Duración automática de la experiencia
+
+`Resources/experience.json` es la fuente de fechas de las empresas, con precisión
+mensual. `end: null` indica empleo activo. Las duraciones y los rangos de fechas
+se actualizan en PHP para la primera carga y en JavaScript al navegar. Los
+empleos terminados mantienen su duración; no hay que editar cifras cada año.
+
+Los totales suman meses exactos y se muestran en años y meses. Las gráficas usan
+meses / 12 y amplían automáticamente el eje si hace falta. El calendario sigue
+America/Bogota; la pestaña abierta detecta cambios de mes y limpia su temporizador
+al salir. Las traducciones conservan la fecha y duración correctas.

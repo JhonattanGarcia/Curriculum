@@ -15,7 +15,7 @@ class Element {
     scrollIntoView() {}
     focus() {}
 }
-function setup(fetchContent) {
+function setup(fetchContent, experienceModule) {
     const content = new Element();
     content.dataset.section = 'summary';
     content.innerHTML = 'summary';
@@ -36,7 +36,7 @@ function setup(fetchContent) {
         document, location, URL, AbortController, performance, innerWidth: 400,
         navigator: {connection: {saveData: true}},
         history: {replaceState() {}, pushState(state, _, url) {pushes.push(state.section); location.pathname = url.pathname;}},
-        window: {listeners: {}, getSelection: () => ({toString: () => ''}), addEventListener(key, listener) {this.listeners[key] = listener;}},
+        window: {ExperienceModule: experienceModule, listeners: {}, getSelection: () => ({toString: () => ''}), addEventListener(key, listener) {this.listeners[key] = listener;}},
         PortfolioTransition: {cancel() {}, async run() {}}, showHeader() {}, setLanguage() {},
         fetch: fetchContent || (async url => ({ok: true, headers: {get: () => '1'}, text: async () => url.pathname})),
         console: {error() {}}, getComputedStyle: () => ({overflowX: 'visible'})
@@ -123,4 +123,13 @@ test('swipe left from Contact returns to Summary; swipe right from Summary retur
     content.listeners.touchend({changedTouches:[{clientX:230,clientY:105}]});
     await new Promise(setImmediate);
     assert.deepEqual(pushes, ['contact', 'summary', 'contact']);
+});
+
+test('section components mount after rendering and dispose before the next section', async () => {
+    const mounted = []; const disposed = [];
+    const module = {initialize(root) {const section = root.dataset.section; mounted.push(section); return () => disposed.push(section);}};
+    const {context} = setup(undefined, module);
+    await context.navigate(2); await context.navigate(4); await context.navigate(2);
+    assert.deepEqual(mounted, ['summary','experience','contact','experience']);
+    assert.deepEqual(disposed, ['summary','experience','contact']);
 });
