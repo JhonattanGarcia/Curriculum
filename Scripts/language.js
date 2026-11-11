@@ -28,12 +28,12 @@ const translations = {
     "es": "Ir al contenido"
   },
   "text1": {
-    "en": "Software development & cybersecurity",
-    "es": "Desarrollo de software & ciberseguridad"
+    "en": "Cybersecurity & Software Development",
+    "es": "Ciberseguridad y desarrollo de software"
   },
   "text2": {
-    "en": "Software developer and Level 2 SOC analyst. Process automation, threat analysis, and solutions that connect development and security.",
-    "es": "Desarrollador de software y analista SOC de nivel 2. Automatización de procesos, análisis de amenazas y soluciones que conectan desarrollo y seguridad."
+    "en": "Cybersecurity and Software Development professional with 10+ years of experience bridging technical expertise and business needs.",
+    "es": "Profesional en ciberseguridad y desarrollo de software con más de 10 años de experiencia conectando el conocimiento técnico con las necesidades del negocio."
   },
   "text3": {
     "en": "Summary",
@@ -48,12 +48,12 @@ const translations = {
     "es": "Experiencia"
   },
   "text7": {
-    "en": "Development with a security mindset.",
-    "es": "Desarrollo con perspectiva de seguridad."
+    "en": "Connecting technology with business outcomes.",
+    "es": "Conectando tecnología con resultados de negocio."
   },
   "text8": {
-    "en": "My work combines tool development, code analysis, and automation to improve security operations.",
-    "es": "Mi trabajo combina desarrollo de herramientas, análisis de código y automatización para mejorar las operaciones de seguridad."
+    "en": "With a background spanning information security, threat analysis, risk management, and process automation, I bring a strong understanding of both technical challenges and their business implications.",
+    "es": "Mi trayectoria abarca seguridad de la información, análisis de amenazas, gestión de riesgos y automatización de procesos, con una sólida comprensión de los desafíos técnicos y sus implicaciones para el negocio."
   },
   "text9": {
     "en": "Software development education at Universitaria Agustiniana and continuous learning in technology and cybersecurity.",
@@ -128,12 +128,12 @@ const translations = {
     "es": "Python, JavaScript, PHP y SQL. Automatización de procesos, inteligencia de amenazas, análisis de código y operaciones de seguridad."
   },
   "education_title": {
-    "en": "Learning that connects disciplines.",
-    "es": "Aprendizaje que conecta disciplinas."
+    "en": "Learning with a practical purpose.",
+    "es": "Aprendizaje con un propósito práctico."
   },
   "education_intro": {
-    "en": "Software development foundations and continuous learning in cybersecurity.",
-    "es": "Bases de desarrollo de software y aprendizaje continuo en ciberseguridad."
+    "en": "Academic foundations and continuous learning in cybersecurity, software development, and the tools that support better business decisions.",
+    "es": "Bases académicas y formación continua en ciberseguridad, desarrollo de software y herramientas para apoyar mejores decisiones de negocio."
   },
   "education_university": {
     "en": "Software Development Program. Academic focus on software development, databases, and project management.",
@@ -176,24 +176,24 @@ const translations = {
     "es": "Análisis de riesgos, detección de fraude y automatización de procesos."
   },
   "about_title": {
-    "en": "Curiosity, strategy, and perspective.",
-    "es": "Curiosidad, estrategia y perspectiva."
+    "en": "Beyond cybersecurity.",
+    "es": "Más allá de la ciberseguridad."
   },
   "about_intro": {
-    "en": "A software developer and security analyst with an interest in solving complex problems.",
-    "es": "Desarrollador de software y analista de seguridad interesado en resolver problemas complejos."
+    "en": "For more than ten years, I have worked at the intersection of technology, security, and business needs. My experience has taught me that identifying a threat matters, but turning that knowledge into decisions, efficient processes, and sustainable results is what creates real value.",
+    "es": "Durante más de diez años he trabajado en la intersección entre la tecnología, la seguridad y las necesidades del negocio. Mi experiencia me ha enseñado que identificar una amenaza es importante, pero convertir ese conocimiento en decisiones, procesos eficientes y resultados sostenibles es lo que genera verdadero valor."
   },
   "approach_title": {
     "en": "How I approach my work",
     "es": "Cómo abordo mi trabajo"
   },
   "approach_body": {
-    "en": "I connect analytical thinking, teamwork, and automation to improve processes and solve security challenges.",
-    "es": "Conecto pensamiento analítico, trabajo en equipo y automatización para mejorar procesos y resolver desafíos de seguridad."
+    "en": "I work with Sales, Development, and SOC teams to turn complex requirements into practical solutions. I take ownership of initiatives that improve security and operational efficiency, build relationships, and create meaningful business outcomes.",
+    "es": "Trabajo con equipos de Ventas, Desarrollo y SOC para transformar requisitos complejos en soluciones prácticas. Asumo la responsabilidad de iniciativas que mejoran la seguridad y la eficiencia operativa, construyen relaciones y generan resultados relevantes para el negocio."
   },
   "dnd_body": {
-    "en": "As a Dungeon Master, I enjoy designing challenges and coordinating collaborative stories.",
-    "es": "Como Dungeon Master, disfruto diseñar desafíos y coordinar historias colaborativas."
+    "en": "As a Dungeon Master in Dungeons & Dragons, I lead and coordinate a group of 25 people, organize sessions, and design challenges that require collaboration and critical decision-making. It is a practical space for leadership: bringing different perspectives together, keeping the group engaged, and guiding people toward a shared goal.",
+    "es": "Como Dungeon Master en Dungeons & Dragons, lidero y coordino un grupo de 25 personas, organizo sesiones y diseño retos que requieren colaboración y toma de decisiones críticas. Es un espacio práctico de liderazgo: conectar distintas perspectivas, mantener al grupo involucrado y orientar a las personas hacia un objetivo común."
   },
   "interests_title": {
     "en": "Beyond the screen",
@@ -212,8 +212,8 @@ const translations = {
     "es": "Hablemos sobre desarrollo de software, ciberseguridad u oportunidades profesionales."
   },
   "email_title": {
-    "en": "Professional email",
-    "es": "Correo profesional"
+    "en": "Mail me",
+    "es": "Escríbeme por correo"
   },
   "whatsapp_pending": {
     "en": "The direct WhatsApp contact link will be available once verified.",
@@ -224,8 +224,8 @@ const translations = {
     "es": "Experiencia y logros"
   },
   "exp_lead": {
-    "en": "Explore my cybersecurity experience by tool, then discover the work and achievements behind it.",
-    "es": "Explora mi experiencia en ciberseguridad por herramienta y descubre el trabajo y los logros que hay detrás."
+    "en": "A track record across information security, threat analysis, risk management, and automation — connecting technical solutions with security, operational efficiency, and business outcomes.",
+    "es": "Una trayectoria en seguridad de la información, análisis de amenazas, gestión de riesgos y automatización, conectando soluciones técnicas con seguridad, eficiencia operativa y resultados de negocio."
   },
   "exp_cyber": {
     "en": "Cybersecurity experience",
@@ -594,6 +594,270 @@ const translations = {
   "exp_duration": {
     "en": "Duration",
     "es": "Duración"
+  },
+  "profile_collaboration": {
+    "en": "Experienced in collaborating with cross-functional teams, including Sales, Development, and SOC, translating complex requirements into practical solutions, and taking ownership of initiatives that improve security and operational efficiency. Driven by solving problems, building relationships, and turning opportunities into meaningful business outcomes.",
+    "es": "Tengo experiencia colaborando con equipos multidisciplinarios de Ventas, Desarrollo y SOC, traduciendo requisitos complejos en soluciones prácticas y liderando iniciativas que mejoran la seguridad y la eficiencia operativa. Me motiva resolver problemas, construir relaciones y convertir oportunidades en resultados relevantes para el negocio."
+  },
+  "edu_academic": {
+    "en": "Academic background",
+    "es": "Formación académica"
+  },
+  "edu_academic_focus": {
+    "en": "Software Development",
+    "es": "Desarrollo de software"
+  },
+  "edu_academic_body": {
+    "en": "Academic foundations in software development, databases, and project management, supporting the design of practical solutions for technical and operational challenges.",
+    "es": "Bases académicas en desarrollo de software, bases de datos y gestión de proyectos, orientadas al diseño de soluciones prácticas para desafíos técnicos y operativos."
+  },
+  "edu_coursework": {
+    "en": "Academic coursework completed",
+    "es": "Formación académica cursada"
+  },
+  "edu_academic_date": {
+    "en": "December 2024",
+    "es": "Diciembre de 2024"
+  },
+  "edu_focus_label": {
+    "en": "Areas of focus",
+    "es": "Áreas de especialización"
+  },
+  "edu_security": {
+    "en": "Cybersecurity & risk management",
+    "es": "Ciberseguridad y gestión de riesgos"
+  },
+  "edu_software": {
+    "en": "Software development & programming",
+    "es": "Desarrollo de software y programación"
+  },
+  "edu_web": {
+    "en": "Web & backend development",
+    "es": "Desarrollo web y backend"
+  },
+  "edu_tools": {
+    "en": "Collaboration & productivity tools",
+    "es": "Herramientas de colaboración y productividad"
+  },
+  "edu_continuous": {
+    "en": "Continuous professional education",
+    "es": "Formación profesional continua"
+  },
+  "edu_platzi_intro": {
+    "en": "Completed courses in security, development, and technical collaboration. Each entry links to its course diploma.",
+    "es": "Cursos aprobados en seguridad, desarrollo y colaboración técnica. Cada registro enlaza a su diploma de curso."
+  },
+  "edu_course_count": {
+    "en": "17 completed courses",
+    "es": "17 cursos aprobados"
+  },
+  "edu_course_status": {
+    "en": "Course completed",
+    "es": "Curso aprobado"
+  },
+  "edu_view_diploma": {
+    "en": "View course diploma",
+    "es": "Ver diploma del curso"
+  },
+  "edu_applied": {
+    "en": "Learning connected to professional practice",
+    "es": "Aprendizaje conectado con la práctica profesional"
+  },
+  "edu_applied_intro": {
+    "en": "These areas support the kind of problems I work on across security operations, development, and business teams.",
+    "es": "Estas áreas respaldan los desafíos que abordo junto a equipos de operaciones de seguridad, desarrollo y negocio."
+  },
+  "edu_apply_security_title": {
+    "en": "Security & risk analysis",
+    "es": "Seguridad y análisis de riesgos"
+  },
+  "edu_apply_security_body": {
+    "en": "Threat analysis, risk assessment, and research into the malicious use of online tools.",
+    "es": "Análisis de amenazas, evaluación de riesgos e investigación sobre el uso malicioso de herramientas en línea."
+  },
+  "edu_apply_dev_title": {
+    "en": "Development & automation",
+    "es": "Desarrollo y automatización"
+  },
+  "edu_apply_dev_body": {
+    "en": "Internal tools, API integrations, and automated searches that support more efficient security operations.",
+    "es": "Herramientas internas, integraciones de API y búsquedas automatizadas que apoyan operaciones de seguridad más eficientes."
+  },
+  "edu_apply_business_title": {
+    "en": "Collaboration & business insight",
+    "es": "Colaboración y análisis de negocio"
+  },
+  "edu_apply_business_body": {
+    "en": "Shared development workflows, operational reporting, and dashboards for management and client billing.",
+    "es": "Flujos de desarrollo compartidos, reportes operativos y tableros para la gestión y la facturación de clientes."
+  },
+  "edu_see_experience": {
+    "en": "Explore the related professional achievements",
+    "es": "Ver los logros profesionales relacionados"
+  },
+  "edu_course_12015": {
+    "en": "ISO 27001 Certification for Businesses Course",
+    "es": "Curso de Certificación ISO 27001 para Empresas"
+  },
+  "edu_date_12015": {
+    "en": "December 28, 2025",
+    "es": "28 de diciembre de 2025"
+  },
+  "edu_course_4045": {
+    "en": "Information Security for Technical Teams Course",
+    "es": "Curso de Seguridad Informática para Equipos Técnicos"
+  },
+  "edu_date_4045": {
+    "en": "December 1, 2025",
+    "es": "1 de diciembre de 2025"
+  },
+  "edu_course_2883": {
+    "en": ".NET Fundamentals Course",
+    "es": "Curso de Fundamentos de .NET"
+  },
+  "edu_date_2883": {
+    "en": "April 10, 2025",
+    "es": "10 de abril de 2025"
+  },
+  "edu_course_3086": {
+    "en": "Basic C# Programming Course",
+    "es": "Curso Básico de Programación con C#"
+  },
+  "edu_date_3086": {
+    "en": "January 29, 2025",
+    "es": "29 de enero de 2025"
+  },
+  "edu_course_2198": {
+    "en": "Introduction to C# with .NET 3.1 Course",
+    "es": "Curso de Introducción a C# con .NET 3.1"
+  },
+  "edu_date_2198": {
+    "en": "January 29, 2025",
+    "es": "29 de enero de 2025"
+  },
+  "edu_course_3208": {
+    "en": "Free Basic Programming Course 2022",
+    "es": "Curso Gratis de Programación Básica 2022"
+  },
+  "edu_date_3208": {
+    "en": "January 3, 2025",
+    "es": "3 de enero de 2025"
+  },
+  "edu_course_1814": {
+    "en": "Basic JavaScript Course",
+    "es": "Curso Básico de JavaScript"
+  },
+  "edu_date_1814": {
+    "en": "December 4, 2021",
+    "es": "4 de diciembre de 2021"
+  },
+  "edu_course_2467": {
+    "en": "Frontend Developer Course",
+    "es": "Curso de Frontend Developer"
+  },
+  "edu_date_2467": {
+    "en": "November 23, 2021",
+    "es": "23 de noviembre de 2021"
+  },
+  "edu_course_2008": {
+    "en": "Definitive HTML and CSS Course",
+    "es": "Curso Definitivo de HTML y CSS"
+  },
+  "edu_date_2008": {
+    "en": "November 20, 2021",
+    "es": "20 de noviembre de 2021"
+  },
+  "edu_course_1925": {
+    "en": "Basic Excel Course",
+    "es": "Curso de Excel Básico"
+  },
+  "edu_date_1925": {
+    "en": "November 11, 2021",
+    "es": "11 de noviembre de 2021"
+  },
+  "edu_course_1450": {
+    "en": "Structured Programming Course",
+    "es": "Curso de Programación Estructurada"
+  },
+  "edu_date_1450": {
+    "en": "November 6, 2021",
+    "es": "6 de noviembre de 2021"
+  },
+  "edu_course_2508": {
+    "en": "Introduction to Backend Development Course",
+    "es": "Curso de Introducción al Desarrollo Backend"
+  },
+  "edu_date_2508": {
+    "en": "November 6, 2021",
+    "es": "6 de noviembre de 2021"
+  },
+  "edu_course_1557": {
+    "en": "Professional Git and GitHub Course",
+    "es": "Curso Profesional de Git y GitHub"
+  },
+  "edu_date_1557": {
+    "en": "November 6, 2021",
+    "es": "6 de noviembre de 2021"
+  },
+  "edu_course_2042": {
+    "en": "Prework: Windows Development Environment Setup Course",
+    "es": "Curso de Prework: Configuración de Entorno de Desarrollo en Windows"
+  },
+  "edu_date_2042": {
+    "en": "November 4, 2021",
+    "es": "4 de noviembre de 2021"
+  },
+  "edu_course_1741": {
+    "en": "Basic Computing Course",
+    "es": "Curso de Computación Básica"
+  },
+  "edu_date_1741": {
+    "en": "November 4, 2021",
+    "es": "4 de noviembre de 2021"
+  },
+  "edu_course_1050": {
+    "en": "Basic Programming Course",
+    "es": "Curso Básico de Programación"
+  },
+  "edu_date_1050": {
+    "en": "November 4, 2021",
+    "es": "4 de noviembre de 2021"
+  },
+  "edu_course_1937": {
+    "en": "Basic Python Course",
+    "es": "Curso Básico de Python"
+  },
+  "edu_date_1937": {
+    "en": "November 2, 2021",
+    "es": "2 de noviembre de 2021"
+  },
+  "about_outlook_title": {
+    "en": "Experience with a broader purpose.",
+    "es": "Experiencia con un propósito más amplio."
+  },
+  "about_impact": {
+    "en": "I have helped build Level 2 SOC operations, driven automation that reduced management time by over 70%, and contributed to initiatives connecting technical capabilities with commercial opportunities.",
+    "es": "He participado en la construcción de operaciones SOC Nivel 2, impulsado automatizaciones que redujeron tiempos de gestión en más del 70% y contribuido a iniciativas que conectan las capacidades técnicas con oportunidades comerciales."
+  },
+  "about_research_before": {
+    "en": "As co-author of ",
+    "es": "Como coautor de "
+  },
+  "about_research_after": {
+    "en": ", I have also brought my threat research experience into professional knowledge sharing, exploring emerging risks and their implications for organizations.",
+    "es": ", también he llevado mi experiencia en investigación de amenazas al terreno de la divulgación profesional, compartiendo conocimiento sobre riesgos emergentes y sus implicaciones para las organizaciones."
+  },
+  "about_direction": {
+    "en": "Today, I want to take that experience to the next level: assume greater leadership responsibilities, connect teams, and contribute to strategic decisions that strengthen security and business growth.",
+    "es": "Hoy busco llevar esa experiencia al siguiente nivel: asumir mayores responsabilidades de liderazgo, conectar equipos y contribuir a decisiones estratégicas que fortalezcan la seguridad y el crecimiento del negocio."
+  },
+  "about_statement": {
+    "en": "Because my goal is not only to solve technical problems. It is to help organizations move forward.",
+    "es": "Porque mi objetivo no es solamente resolver problemas técnicos. Es ayudar a las organizaciones a avanzar."
+  },
+  "interests_subtitle": {
+    "en": "Strategy, travel & photography.",
+    "es": "Estrategia, viajes y fotografía."
   }
 };
 
@@ -609,8 +873,8 @@ function setLanguage(language) {
     const english = language === 'en';
     document.title = english ? 'Jhonattan Garcia | Software & Cybersecurity' : 'Jhonattan Garcia | Software y ciberseguridad';
     document.querySelector('meta[name="description"]').content = english
-        ? 'Portfolio of Jhonattan Garcia: software development, cybersecurity, and professional experience.'
-        : 'Portafolio de Jhonattan Garcia: desarrollo de software, ciberseguridad y experiencia profesional.';
+        ? 'Jhonattan Garcia — Cybersecurity and Software Development professional with 10+ years of experience connecting technical expertise with business needs.'
+        : 'Jhonattan Garcia: profesional en ciberseguridad y desarrollo de software con más de 10 años conectando experiencia técnica y necesidades de negocio.';
     document.querySelector('.brand').setAttribute('aria-label', english ? 'Jhonattan Garcia, home' : 'Jhonattan Garcia, inicio');
     document.querySelector('.section-nav').setAttribute('aria-label', english ? 'Curriculum sections' : 'Secciones del currículum');
     document.dispatchEvent(new CustomEvent('languagechange', { detail: language }));

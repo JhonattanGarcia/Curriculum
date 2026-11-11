@@ -151,3 +151,21 @@ Los totales suman meses exactos y se muestran en años y meses. Las gráficas us
 meses / 12 y amplían automáticamente el eje si hace falta. El calendario sigue
 America/Bogota; la pestaña abierta detecta cambios de mes y limpia su temporizador
 al salir. Las traducciones conservan la fecha y duración correctas.
+
+## Educaci?n
+
+`formacion_academica.html` presenta formaci?n en desarrollo de software sin
+atribuir un grado universitario distinto ni especificar la denominaci?n formal
+del programa. La informaci?n de asignaturas cursadas y diciembre de 2024 procede
+del CV anterior.
+
+Incluye los 17 cursos de Platzi proporcionados por el propietario, con fechas
+exactas y enlaces originales a los diplomas. Se agrupan en seguridad y riesgos,
+programaci?n, desarrollo web/backend y herramientas de colaboraci?n/productividad.
+Los cursos de seguridad aparecen primero. Se describen como cursos aprobados,
+sin atribuir una certificaci?n ISO 27001 independiente al perfil.
+
+Los textos y fechas tienen traducci?n ingl?s/espa?ol. Los registros se incluyen
+en el HTML inicial, sin depender de JavaScript ni descargar im?genes de diplomas.
+El t?tulo Platzi conserva el enlace al perfil. Los bloques de aplicaci?n remiten
+a los logros documentados en Experiencia.

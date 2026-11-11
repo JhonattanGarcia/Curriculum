@@ -1,0 +1,11 @@
+@import url('./variables.css');
+
+.about-introduction h1 { font-size: var(--heading-h2); }
+.about-introduction .tech-label { margin-bottom: var(--space-6); }
+.book-content .about-statement { margin-block: var(--space-6); padding: var(--space-4); border-left: 3px solid var(--accent-primary); background: var(--surface-light-alt); }
+.about-statement strong { font-weight: var(--weight-semibold); }
+
+.about-interest { margin-top: var(--space-4); text-align: justify; hyphens: auto; }
+.about-interest h4,
+.about-interest p { display: inline; margin: 0; font-size: var(--text-base); line-height: inherit; }
+.about-interest h4 { font-weight: var(--weight-semibold); letter-spacing: var(--tracking-body); }

@@ -49,7 +49,7 @@ $schema = [
     'name' => $title, 'url' => $publicBase . $route['path'],
     'mainEntity' => [
         '@type' => 'Person', 'name' => 'Jhonattan Garcia',
-        'jobTitle' => 'Software Developer / Level 2 SOC Analyst',
+        'jobTitle' => 'Cybersecurity and Software Development Professional',
         'email' => 'mailto:jhonattan_garcia@outlook.com',
         'url' => $publicBase,
         'sameAs' => ['https://github.com/JhonattanGarcia', 'https://www.linkedin.com/in/jhonattan-garcia-prieto-33252517b/']

@@ -51,3 +51,13 @@ h4 {
     letter-spacing: var(--tracking-label);
     text-transform: uppercase;
 }
+
+/* Shared reading style, including dynamically loaded section fragments. */
+.introduction-copy,
+.book-content p:not(.tech-label, .experience-duration, .contact-identifier, .whatsapp-identifier),
+.achievements-table td:last-child {
+    text-align: justify;
+    text-align-last: start;
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
