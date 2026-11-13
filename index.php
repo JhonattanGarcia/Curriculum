@@ -3,6 +3,7 @@
 declare(strict_types=1);
 require_once __DIR__ . '/Scripts/experience_data.php';
 $experienceConfig = json_decode(file_get_contents(__DIR__ . '/Resources/experience.json'), true, 512, JSON_THROW_ON_ERROR);
+$experienceConfig['chartLibraryVersion'] = substr(hash_file('sha256', __DIR__ . '/Scripts/vendor/chart.umd.min.js'), 0, 12);
 $routes = json_decode(file_get_contents(__DIR__ . '/routes.json'), true, 512, JSON_THROW_ON_ERROR);
 $base = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'])), '/') . '/';
 $request = rawurldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?: '/');
@@ -36,6 +37,8 @@ if ($index === false) {
     $content = preg_replace('/^\xEF\xBB\xBF/', '', file_get_contents(__DIR__ . '/' . $routes[$index]['file']));
 }
 if ($routes[$index]['id'] === 'experience') $content = render_experience($content, $experienceConfig);
+// Revalidate HTML so it references the current asset versions after deployment.
+header('Cache-Control: no-cache');
 if (isset($_GET['fragment'])) {
     header('Content-Type: text/html; charset=UTF-8');
     header('X-Portfolio-Fragment: 1');
@@ -43,7 +46,7 @@ if (isset($_GET['fragment'])) {
     exit;
 }
 $route = $routes[$index];
-$title = $route['label']['en'] . ' | Jhonattan Garcia';
+$title = $route['label']['en'] . ' | Jhonattan Garcia — Extended CV';
 $schema = [
     '@context' => 'https://schema.org', '@type' => 'ProfilePage',
     'name' => $title, 'url' => $publicBase . $route['path'],
@@ -78,5 +81,13 @@ foreach ([-1 => 'previous', 1 => 'next'] as $step => $key) {
 $html = str_replace('<!-- PAGE_CONTROLS -->', $controls, $html);
 $html = str_replace('<script id="route-data" type="application/json">null</script>', '<script id="route-data" type="application/json">' . json_encode($routes, JSON_HEX_TAG | JSON_UNESCAPED_SLASHES) . '</script>', $html);
 $html = str_replace('data-route="' . $route['id'] . '" data-i18n="nav_', 'data-route="' . $route['id'] . '" aria-current="page" data-i18n="nav_', $html);
+// Content hashes also change when a deployment preserves original file timestamps.
+$html = preg_replace_callback('/\b(href|src)="((?:Styles|Scripts)\/[^"?]+)(?:\?[^\"]*)?"/', static function (array $match) use ($escape): string {
+    $file = __DIR__ . '/' . $match[2];
+    if (!is_file($file)) return $match[0];
+    $version = substr(hash_file('sha256', $file), 0, 12);
+    return $match[1] . '="' . $escape($match[2]) . '?v=' . $version . '"';
+}, $html);
 header('Content-Type: text/html; charset=UTF-8');
+
 echo $html;

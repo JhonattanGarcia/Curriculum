@@ -111,16 +111,15 @@ menú hamburguesa abierto se ocultan las zonas laterales para evitar cruces.
 
 ## Experiencia: gr?ficas y logros
 
-`experiencia_laboral.html` conserva los 19 logros de las tres empresas del CV
+`experiencia_laboral.html` conserva los 18 logros de las dos empresas del CV
 anterior. La investigaci?n sobre Replit se destaca con los enlaces originales
 al sitio oficial y a LinkedIn. Los logros se renderizan en el servidor y se
 pueden leer sin JavaScript.
 
 `Scripts/experiencia_laboral.js` controla dos bloques independientes de barras
-horizontales y gr?fico circular. Se preservan los conjuntos de herramientas y
-las cifras originales (3 a?os en Teleperformance y 6 en Appgate); la nota bajo
-las gr?ficas explica que son datos del CV anterior. Los filtros actualizan
-ambas gr?ficas, el total y una tabla accesible de cada bloque.
+horizontales y gráfico circular. «Todos los cargos mostrados» incluye únicamente Appgate y Teleperformance. Los filtros de herramientas muestran únicamente
+los cargos correspondientes y cambian el título del total para aclarar su alcance.
+La duración se calcula desde las fechas laborales, no desde cifras fijas.
 
 Chart.js 4.5.1 se sirve desde `Scripts/vendor/`, con licencia MIT incluida. Solo
 se carga al abrir Experiencia. El cargador central inicializa el m?dulo tras
@@ -156,8 +155,7 @@ al salir. Las traducciones conservan la fecha y duración correctas.
 
 `formacion_academica.html` presenta formaci?n en desarrollo de software sin
 atribuir un grado universitario distinto ni especificar la denominaci?n formal
-del programa. La informaci?n de asignaturas cursadas y diciembre de 2024 procede
-del CV anterior.
+del programa. El propietario confirm? que el t?tulo fue obtenido en abril de 2025.
 
 Incluye los 17 cursos de Platzi proporcionados por el propietario, con fechas
 exactas y enlaces originales a los diplomas. Se agrupan en seguridad y riesgos,
@@ -169,3 +167,30 @@ Los textos y fechas tienen traducci?n ingl?s/espa?ol. Los registros se incluyen
 en el HTML inicial, sin depender de JavaScript ni descargar im?genes de diplomas.
 El t?tulo Platzi conserva el enlace al perfil. Los bloques de aplicaci?n remiten
 a los logros documentados en Experiencia.
+
+## Cach? de recursos en producci?n
+
+`index.php` a?ade `?v=<SHA-256 abreviado>` a las hojas CSS y scripts locales del
+cascar?n. El valor depende del contenido, no de la fecha del archivo, por lo que
+funciona tambi?n al subir archivos preservando sus timestamps. La biblioteca
+Chart.js cargada bajo demanda lleva su propio hash en la configuraci?n inicial.
+Las variables CSS actuales se cargan al final para prevalecer sobre imports
+anidados antiguos que puedan estar en cach?. El HTML solicita revalidaci?n.
+
+Esto corrige el caso observado en producci?n: la URL sin versi?n de
+`Scripts/script.js` entregaba el router del sitio antiguo, que fallaba al buscar
+`.next-button` e imped?a inicializar las gr?ficas de la versi?n nueva.
+
+Para desplegar esta correcci?n deben actualizarse `index.php`, `index.html` y
+`Scripts/experiencia_laboral.js` juntos. Si el hosting guarda HTML en cach?, purgar
+esa cach? tras subirlos. No es necesario cambiar datos laborales ni diplomas.
+
+Verificaci?n: `python Tests/check_asset_versions.py` y
+`node Tests/asset_cache.browser.cjs` (Chrome de pruebas en el puerto 9239).
+La prueba de navegador simula un router antiguo en la URL sin versi?n y comprueba
+que el arranque usa las URLs nuevas. `QA_USE_LOCAL_DOCUMENT=1` permite probar los
+recursos del dominio con el HTML/m?dulo corregidos interceptados solo en el navegador;
+no modifica el hosting.
+
+
+El total de las gráficas se limita a los cargos mostrados en el sitio; no se presenta como el total completo de la trayectoria profesional.

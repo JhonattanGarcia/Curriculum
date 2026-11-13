@@ -59,10 +59,6 @@ const translations = {
     "en": "Software development education at Universitaria Agustiniana and continuous learning in technology and cybersecurity.",
     "es": "Formación en desarrollo de software en la Universitaria Agustiniana y aprendizaje continuo en tecnología y ciberseguridad."
   },
-  "text10": {
-    "en": "Experience at Appgate, Américas BPS, and Teleperformance in software analysis, reporting, and information security.",
-    "es": "Experiencia en Appgate, Américas BPS y Teleperformance, en análisis de software, reportes y seguridad de la información."
-  },
   "text11": {
     "en": "More about me",
     "es": "Más sobre mí"
@@ -80,8 +76,8 @@ const translations = {
     "es": "Contacto"
   },
   "text15": {
-    "en": "Jhonattan Garcia · Personal portfolio",
-    "es": "Jhonattan Garcia · Portafolio personal"
+    "en": "Jhonattan Garcia · Extended CV",
+    "es": "Jhonattan Garcia · CV ampliado"
   },
   "cta": {
     "en": "Let us talk",
@@ -159,14 +155,6 @@ const translations = {
     "en": "Threat analysis, code analysis, and automation tools to support security operations.",
     "es": "Análisis de amenazas, análisis de código y herramientas de automatización para apoyar las operaciones de seguridad."
   },
-  "bps_role": {
-    "en": "Report Analyst",
-    "es": "Analista de reportes"
-  },
-  "bps_body": {
-    "en": "Data analysis and operational reporting.",
-    "es": "Análisis de datos y reportes operativos."
-  },
   "tp_role": {
     "en": "Information Security",
     "es": "Seguridad de la información"
@@ -228,8 +216,8 @@ const translations = {
     "es": "Una trayectoria en seguridad de la información, análisis de amenazas, gestión de riesgos y automatización, conectando soluciones técnicas con seguridad, eficiencia operativa y resultados de negocio."
   },
   "exp_cyber": {
-    "en": "Cybersecurity experience",
-    "es": "Experiencia en ciberseguridad"
+    "en": "Professional experience",
+    "es": "Experiencia profesional"
   },
   "exp_tools": {
     "en": "Experience by tool",
@@ -240,16 +228,16 @@ const translations = {
     "es": "Selecciona una herramienta para actualizar ambas gráficas y el total."
   },
   "exp_all": {
-    "en": "All",
-    "es": "Todas"
+    "en": "All listed roles",
+    "es": "Todos los cargos mostrados"
   },
   "exp_years": {
     "en": "Years of experience",
     "es": "Años de experiencia"
   },
   "exp_total": {
-    "en": "Total experience",
-    "es": "Experiencia total"
+    "en": "Experience across listed roles",
+    "es": "Experiencia en los cargos mostrados"
   },
   "exp_distribution": {
     "en": "Experience by company",
@@ -326,10 +314,6 @@ const translations = {
   "exp_duration_0": {
     "en": "Dec 2019 – Present",
     "es": "Dic 2019 – Actualidad"
-  },
-  "exp_duration_1": {
-    "en": "May 2019 – Aug 2019",
-    "es": "May 2019 – Ago 2019"
   },
   "exp_duration_2": {
     "en": "Apr 2016 – Feb 2019",
@@ -463,18 +447,6 @@ const translations = {
     "en": "Developed tools to improve threat analysis, integrating APIs with several external portals.",
     "es": "Desarrollé herramientas de análisis de amenazas mediante la integración de API de varios portales externos."
   },
-  "exp_role_body_1": {
-    "en": "Supported the Salud Total campaign during a maternity leave. Reviewed web reports to ensure accurate and timely client information, developed dashboards, analyzed metrics, and managed key performance indicators, contributing to seamless campaign operations during a critical period.",
-    "es": "Apoyé la campaña de Salud Total durante una licencia de maternidad. Revisé reportes web para asegurar información precisa y oportuna, desarrollé tableros, analicé métricas y gestioné indicadores clave de desempeño para mantener la continuidad de la operación."
-  },
-  "exp_achievement_12": {
-    "en": "Dashboard Development",
-    "es": "Desarrollo de tableros de control"
-  },
-  "exp_achievement_desc_12": {
-    "en": "Created dashboards to visualize key metrics for management and client billing.",
-    "es": "Creé tableros para visualizar métricas clave para la gestión y la facturación de clientes."
-  },
   "exp_role_body_2": {
     "en": "In my role as a Report Analyst for the security area, I was instrumental in the creation and expansion of the security department for the Rebel campaign, protecting company and client data across multiple regions. I developed algorithms to prevent corporate fraud in various high-risk areas, updated personnel matrices on servers, and automated processes that significantly reduced management times by over 70%. My contributions helped prevent substantial financial losses and facilitated the global expansion of the security department to countries including Canada, Brazil, Peru, Mexico, India, Spain, and Guyana.",
     "es": "Como analista de reportes del área de seguridad, participé en la creación y expansión del departamento de seguridad para la campaña Rebel, protegiendo datos en múltiples regiones. Desarrollé algoritmos de prevención de fraude, actualicé matrices de personal en servidores y automaticé procesos que redujeron los tiempos de gestión en más del 70 %. Contribuí a prevenir pérdidas financieras y a la expansión del departamento a Canadá, Brasil, Perú, México, India, España y Guyana."
@@ -555,14 +527,6 @@ const translations = {
     "en": "Designed a new sales protocol that generated measurable commercial results.",
     "es": "Diseño de un protocolo de ventas con resultados comerciales medibles."
   },
-  "exp_highlight_dashboard": {
-    "en": "Dashboards for management & billing",
-    "es": "Tableros para gestión y facturación"
-  },
-  "exp_highlight_dashboard_body": {
-    "en": "Made key operational metrics available for management decisions and client billing.",
-    "es": "Visualización de métricas operativas clave para la gestión y la facturación de clientes."
-  },
   "exp_highlight_automation": {
     "en": "Over 70% less management time",
     "es": "Más del 70 % menos tiempo de gestión"
@@ -611,13 +575,9 @@ const translations = {
     "en": "Academic foundations in software development, databases, and project management, supporting the design of practical solutions for technical and operational challenges.",
     "es": "Bases académicas en desarrollo de software, bases de datos y gestión de proyectos, orientadas al diseño de soluciones prácticas para desafíos técnicos y operativos."
   },
-  "edu_coursework": {
-    "en": "Academic coursework completed",
-    "es": "Formación académica cursada"
-  },
   "edu_academic_date": {
-    "en": "December 2024",
-    "es": "Diciembre de 2024"
+    "en": "April 2025",
+    "es": "Abril de 2025"
   },
   "edu_focus_label": {
     "en": "Areas of focus",
@@ -688,8 +648,8 @@ const translations = {
     "es": "Colaboración y análisis de negocio"
   },
   "edu_apply_business_body": {
-    "en": "Shared development workflows, operational reporting, and dashboards for management and client billing.",
-    "es": "Flujos de desarrollo compartidos, reportes operativos y tableros para la gestión y la facturación de clientes."
+    "en": "Shared development workflows and collaboration between Sales, Development, and SOC teams to turn technical requirements into practical solutions.",
+    "es": "Flujos de desarrollo compartidos y colaboración entre equipos de Ventas, Desarrollo y SOC para convertir requisitos técnicos en soluciones prácticas."
   },
   "edu_see_experience": {
     "en": "Explore the related professional achievements",
@@ -858,6 +818,14 @@ const translations = {
   "interests_subtitle": {
     "en": "Strategy, travel & photography.",
     "es": "Estrategia, viajes y fotografía."
+  },
+  "edu_degree_awarded": {
+    "en": "Degree awarded",
+    "es": "Título obtenido"
+  },
+  "exp_filtered_total": {
+    "en": "Experience in roles using this tool",
+    "es": "Experiencia en cargos que utilizan esta herramienta"
   }
 };
 
@@ -871,10 +839,10 @@ function setLanguage(language) {
         if (text) element.textContent = text;
     });
     const english = language === 'en';
-    document.title = english ? 'Jhonattan Garcia | Software & Cybersecurity' : 'Jhonattan Garcia | Software y ciberseguridad';
+    document.title = english ? 'Jhonattan Garcia | Extended CV' : 'Jhonattan Garcia | CV ampliado';
     document.querySelector('meta[name="description"]').content = english
-        ? 'Jhonattan Garcia — Cybersecurity and Software Development professional with 10+ years of experience connecting technical expertise with business needs.'
-        : 'Jhonattan Garcia: profesional en ciberseguridad y desarrollo de software con más de 10 años conectando experiencia técnica y necesidades de negocio.';
+        ? 'Extended CV of Jhonattan Garcia — Cybersecurity and Software Development professional with 10+ years of experience connecting technical expertise with business needs.'
+        : 'CV ampliado de Jhonattan Garcia: profesional en ciberseguridad y desarrollo de software con más de 10 años conectando experiencia técnica y necesidades de negocio.';
     document.querySelector('.brand').setAttribute('aria-label', english ? 'Jhonattan Garcia, home' : 'Jhonattan Garcia, inicio');
     document.querySelector('.section-nav').setAttribute('aria-label', english ? 'Curriculum sections' : 'Secciones del currículum');
     document.dispatchEvent(new CustomEvent('languagechange', { detail: language }));

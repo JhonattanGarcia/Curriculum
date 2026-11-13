@@ -19,10 +19,8 @@ test('active experience grows automatically in subsequent years', () => {
 });
 test('finished employment stays fixed and future employment never becomes negative', () => {
     const tp = config.companies.find(company => company.id === 'teleperformance');
-    const bps = config.companies.find(company => company.id === 'americas');
     assert.equal(calculateMonths(tp,november2026),34);
     assert.equal(calculateMonths(tp,november2027),34);
-    assert.equal(calculateMonths(bps,november2027),3);
     assert.equal(calculateMonths(tp,new Date('2015-01-01T12:00:00Z')),0);
 });
 test('filters preserve the different tool membership and total exact calendar months', () => {
@@ -51,4 +49,13 @@ test('empty results and singular durations format correctly in both languages', 
     assert.equal(formatDuration(1,'es'),'1 mes');
     assert.equal(formatDuration(12),'1 year');
     assert.equal(formatDuration(13,'es'),'1 año 1 mes');
+});
+
+test('totals cover only the listed roles and continue updating over time', () => {
+    for (const group of ['cyber','tools']) {
+        const all=selectData(group,'all',november2026);
+        assert.deepEqual(Array.from(all.rows, row=>row.id),['teleperformance','appgate']);
+        assert.equal(all.totalMonths,117);
+        assert.equal(selectData(group,'all',november2027).totalMonths,129);
+    }
 });

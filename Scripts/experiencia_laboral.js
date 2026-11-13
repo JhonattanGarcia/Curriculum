@@ -39,7 +39,9 @@ window.ExperienceModule = (() => {
         if (window.Chart) return Promise.resolve(window.Chart);
         if (!library) library = new Promise((resolve, reject) => {
             const script = document.createElement('script');
-            script.src = new URL('Scripts/vendor/chart.umd.min.js', document.baseURI).href;
+            const url = new URL('Scripts/vendor/chart.umd.min.js', document.baseURI);
+            url.searchParams.set('v', config.chartLibraryVersion || '4.5.1');
+            script.src = url.href;
             script.async = true;
             script.onload = () => {
                 if (window.Chart) resolve(window.Chart);
@@ -67,7 +69,7 @@ window.ExperienceModule = (() => {
             const style = getComputedStyle(document.documentElement);
             const value = key => style.getPropertyValue(key).trim();
             return {
-                bar: value('--chart-bar'), companies: [value('--chart-teleperformance'), value('--chart-appgate')],
+                bar: value('--chart-bar'), companies: {teleperformance: value('--chart-teleperformance'), appgate: value('--chart-appgate')},
                 text: value('--text-primary'), muted: value('--text-secondary'), border: value('--border-light'),
                 paper: value('--surface-light'), tooltip: value('--ink'), inverse: value('--text-on-dark'),
                 font: value('--font-body'),
@@ -83,6 +85,10 @@ window.ExperienceModule = (() => {
             const colors = palette();
             const labels = rows.map(row => row.company);
             const values = rows.map(row => row.years);
+            const totalKey = filter === 'all' ? 'exp_total' : 'exp_filtered_total';
+            const totalLabel = block.querySelector('[data-total-label]');
+            totalLabel.dataset.i18n = totalKey;
+            totalLabel.textContent = translate(totalKey);
             block.querySelector('[data-total]').textContent = String(total);
             const table = block.querySelector('[data-chart-rows]');
             table.replaceChildren(...rows.map(row => {
@@ -100,12 +106,12 @@ window.ExperienceModule = (() => {
             });
             const summary = rows.map(row => `${row.company}: ${formatDuration(row.months, language)}`).join('; ');
             block.querySelectorAll('[data-chart-label]').forEach(label => {
-                label.textContent = `${translate('exp_years')}. ${summary}. ${translate('exp_total')}: ${total}.`;
+                label.textContent = `${translate('exp_years')}. ${summary}. ${translate(totalKey)}: ${total}.`;
             });
             if (!ChartClass) return;
             block.classList.add('charts-ready');
             for (const [offset, type] of ['bar', 'pie'].entries()) {
-                const companyColors = rows.map(row => colors.companies[row.company === 'Appgate' ? 1 : 0]);
+                const companyColors = rows.map(row => colors.companies[row.id] || colors.bar);
                 const dataset = {label: translate('exp_years'), data: values, backgroundColor: type === 'bar' ? colors.bar : companyColors, borderColor: type === 'bar' ? colors.bar : colors.paper, borderWidth: type === 'bar' ? 1 : 2};
                 const options = {
                     responsive: true, maintainAspectRatio: false, resizeDelay: 80,

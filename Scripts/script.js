@@ -32,7 +32,7 @@ function refreshMetadata() {
     if (currentIndex < 0) return;
     const route = routes[currentIndex];
     const language = document.documentElement.lang;
-    document.title = `${route.label[language] || route.label.en} | Jhonattan Garcia`;
+    document.title = `${route.label[language] || route.label.en} | Jhonattan Garcia — ${language === 'es' ? 'CV ampliado' : 'Extended CV'}`;
     document.querySelector('meta[name="description"]').content = route.description;
     const canonical = document.querySelector('link[rel="canonical"]');
     const canonicalBase = canonical ? new URL('.', canonical.href) : appBase;
